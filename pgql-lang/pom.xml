@@ -16,18 +16,18 @@
     <dependency>
       <groupId>org.metaborg</groupId>
       <artifactId>org.metaborg.spoofax.core.uber</artifactId>
-      <version>2.1.0</version>
-      <exclusions>
-        <exclusion>
-          <groupId>com.google.guava</groupId>
-          <artifactId>guava</artifactId>
-        </exclusion>
-      </exclusions>
+      <version>2.3.0</version>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.5</version>
+    </dependency>
+    <!-- Explicitly added -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>23.0</version>
     </dependency>
 
     <dependency>
@@ -43,6 +43,27 @@
       <id>metaborgRepo</id>
       <url>http://artifacts.metaborg.org/content/repositories/releases/</url>
     </repository>
+    <repository>
+        <id>metaborg-release-repo</id>
+        <url>http://artifacts.metaborg.org/content/repositories/releases/</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+    <repository>
+        <id>metaborg-snapshot-repo</id>
+        <url>http://artifacts.metaborg.org/content/repositories/snapshots/</url>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>
+
   </repositories>
 
   <properties>
@@ -93,4 +114,26 @@
     </repository>
   </distributionManagement>
 
+  <pluginRepositories>
+    <pluginRepository>
+        <id>metaborg-release-repo</id>
+        <url>http://artifacts.metaborg.org/content/repositories/releases/</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+        <id>metaborg-snapshot-repo</id>
+        <url>http://artifacts.metaborg.org/content/repositories/snapshots/</url>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
 </project>
